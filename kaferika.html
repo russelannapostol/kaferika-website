@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAFERIKA WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/19db860d87.js" crossorigin="anonymous"></script>
+</head> 
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#about">About</a> </li>
+                <li><a href="#view">View</a> </li>
+                <li><a href="#menu">Menu</a> </li>
+                <li><a href="#foods">Foods</a> </li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<!-- ----------------about---------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/ABOUT.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Kaferika</h1>
+                <p> Kaferika is a perfect place to dine in Guiuan. A type of a fast food business wherein it is a dining area and a place to unwind and chill. In addtion, it is a family and couple friendly place. They are open during Tuesday to Saturday (10:00am to 8:00pm) Sunday (10:00am to 7:00pm) and closed every Monday. </p>
+            
+            <div class="tab-titles">
+                 <p class="tab-links active-link" onclick="opentab('address')">Address</p>
+                 <p class="tab-links" onclick="opentab('contact information')">Contact Information</p>
+            </div>
+            <div class="tab-contents active-tab" id="address">
+                <ul>
+                    <li><span>Brgy. 2, San Francisco Street Guiuan E. Samar</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="contact information">
+                <ul>
+                    <li><span>+639051392717</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------------view------------------ -->
+<div id="view">
+    <div class="container">
+        <h1 class="sub-title">Kaferika's View</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/view1.jpg">
+                <div class="layer">
+                    <h3>Family And Couple Friendly Place</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/view2.jpg">
+                <div class="layer">
+                    <h3>Place To Unwind and Chill</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/view3.jpg">
+                <div class="layer">
+                    <h3>Dining Area</h3>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+</div>
+<!-- -------------------menu---------------------- -->
+<div id="menu">
+    <div class="container">
+        <h1 class="sub-title">Menu</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/meals.jpg">
+                <div class="layer">
+                    <h3>Solo Meals</h3>
+                    <p>Burger Steak - 70.00 pesos <br> Breaded Fish - 80.00 pesos <br> Breaded Pork 85.00 pesos <br> Spicy Chicken Bites - 90.00 pesos <br> Chicken Sisig - 90.00 pesos 
+                    </p>
+
+                    <h4>For Sharing (for 2-3)</h4>
+                    <p> Chicken Sisig - 150.00 pesos <br> Special Bam-I - 160.00 pesos</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/meals.jpg">
+                <div class="layer">
+                    <h3>Snacks/Desserts</h3>
+                    <p>Fries - 50.00 pesos <br> Potato Cheese Sticks - 50.00 pesos <br> Special Halo-Halo - 80.00 pesos <br> Chicken Burger - 80.00 pesos <br> Carbonara 90.00 pesos <br> Sizzling Brownie - 120.00 pesos</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/meals.jpg">
+                <div class="layer">
+                    <h3>Drinks</h3>
+                    <p>Mango Graham Shake - 65.00 pesos <br> Cookies 'n Cream Shake - 65.00 pesos <br> Kaferika's Special Shake - 70.00 pesos <br> 1.5 L Softdrink - 95.00 pesos <br> Mismo - 25.00 pesos <br> Bottled Water - 15.00 pesos <br> Cucumber Lemonade - 80.00 pesos <br> Pink Lemonade - 80.00 pesos</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- --------------------foods-------------------------- -->
+<div id="foods">
+    <div class="container">
+        <h1 class="sub-title">Foods</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/food1.jpg">
+                <div class="layer">
+                 <p>People who love to eat are always the best people.</p>    
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/food2.jpg">
+                <div class="layer">
+                <p>People who love to eat are always the best people.</p>   
+                </div>  
+            </div>
+            <div class="work">
+                <img src="images/food3.jpg">
+                <div class="layer">
+                <p>People who love to eat are always the best people.</p>      
+                </div>
+            </div>
+        </div>
+      
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+</body>
+</html> 
